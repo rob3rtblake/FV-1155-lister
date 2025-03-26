@@ -1,119 +1,81 @@
-# Automated NFT Listing Script
+# NFT Bonding Curve Lister
 
-This project automates the process of listing ERC-1155 NFTs on a marketplace using the thirdweb SDK. The script is designed to create listings at regular intervals with intelligent time-based strategies and balance monitoring.
+A Node.js-based bot for managing NFT listings with a bonding curve pricing model on Thirdweb's marketplace.
 
-## Features
+## Current State
 
-- **Scheduled Listings**: Creates NFT listings at the top of each hour
-- **Time-Based Strategy**: 
-  - During regular hours: Creates both ETH and ASTR listings
-  - During daytime hours (1pm-7pm): Creates only ASTR listings
-- **Dynamic Response**: Automatically creates new listings when tokens are sold
-- **Balance Monitoring**: Checks for balance changes every 10 minutes
-- **Configurable Pricing**: Set different prices for ETH and ASTR currencies
-- **Gas Optimization**: Includes retry mechanisms and gas settings to minimize costs
-- **Detailed Logging**: Comprehensive logging of all operations and decisions
+- Contract Address: `0x7e5F161dd824d98AC3474eBf550716d0cb83E8C6`
+- Marketplace Address: `0xF87f5313E830d8E2670898e231D8701532b1eB09`
+- Token ID: 2 (ERC1155)
+- Current Status: 3 tokens already purchased
+- Price Range: 0.00001 ETH to 0.69 ETH
+- Total Tokens: 666
 
-## Requirements
+## Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
-- A wallet with tokens to list
-- Access to the Soenium network
+- Node.js v14 or higher
+- npm (Node Package Manager)
+- Global environment variables set up in `$HOME/.x_globals/.env`:
+  - `PRIVATE_KEY`: Your wallet's private key
+  - `RPC_URL`: Your Ethereum RPC URL
 
 ## Installation
 
-1. Clone this repository:
-   ```
-   git clone <repository-url>
-   cd FV-1155-lister
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
+1. Clone the repository
+2. Run the installation script:
+   ```bash
+   ./install.sh
    ```
 
-3. Create a `.env` file with the following variables:
-   ```
-   PRIVATE_KEY=your_wallet_private_key
-   RPC_URL=https://rpc.soenium.io
-   ```
-
-## Configuration
-
-The script can be configured by modifying the variables at the top of `script/thirdweb-listing.js`:
-
-- `NFT_CONTRACT_ADDRESS`: The address of your ERC-1155 token contract
-- `MARKETPLACE_ADDRESS`: The address of the marketplace contract
-- `TOKEN_ID`: The ID of the token to list
-- `CURRENCY_OPTIONS`: Configure pricing for different currencies:
-  ```javascript
-  const CURRENCY_OPTIONS = {
-    NATIVE_ETH: {
-      address: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-      price: "0.0008888", // ETH price
-      label: "ETH"
-    },
-    ASTR: {
-      address: "0x2cae934a1e84f693fbb78ca5ed3b0a6893259441",
-      price: "62", // ASTR price
-      label: "ASTR"
-    }
-  };
-  ```
-- `LISTING_DURATION_DAYS`: How long each listing should be active
-- `GAS_SETTINGS`: Configure gas settings for transactions
+The installation script will:
+- Create necessary directories
+- Install dependencies
+- Set up logging
+- Configure environment variables
+- Initialize the current state
 
 ## Usage
 
-Run the script using the provided shell script:
+You can start the bot using either:
 
+```bash
+npm run start
 ```
-cd script
-./run-thirdweb.sh
+
+or
+
+```bash
+./script/run-thirdweb.sh
 ```
 
-The script will:
-1. Connect to the network using the provided private key
-2. Check your NFT balance
-3. Set the necessary approvals (first-time only)
-4. Begin creating listings according to the configured strategy
+## Features
 
-## How It Works
+- Automatic bonding curve price calculation
+- Balance monitoring for token sales
+- Automatic listing creation when tokens are sold
+- Gas optimization with retry mechanism
+- Comprehensive logging system
+- Error handling and recovery
 
-### Listing Strategy
+## Logging
 
-- **Regular Hours**: Creates one ETH listing and one ASTR listing at the top of each hour
-- **Daytime Hours (1pm-7pm)**: Creates only one ASTR listing at the top of each hour
-- **Balance Monitoring**: 
-  - Checks token balance every 10 minutes
-  - If balance decreases (tokens sold), immediately creates new listings
-  - For balance-triggered listings, uses a probability distribution (35% ETH, 65% ASTR)
+Logs are stored in the `server-logs` directory:
+- `bonding-curve-log.txt`: Main activity log
+- `time-check.txt`: Timing information
 
-### Logging
+## Dependencies
 
-All operations are logged to:
-- Console output
-- `script/nft-listing-log.txt` file
-- Time checks are logged to `script/time-check.txt` for debugging
+- @thirdweb-dev/sdk: ^4.0.23
+- dotenv: ^16.0.0
+- ethers: ^5.7.2
 
-## Common Issues
+## Security Notes
 
-- **"Token balance did not decrease after listing"**: This warning may appear if the marketplace doesn't take custody of tokens immediately. This is normal for some marketplace contracts.
-- **Missing API key warning**: You may see a message about providing a secretKey for thirdweb services. The script will still function, but for production use, you should consider adding an API key.
-
-## Best Practices
-
-- Run the script on a dedicated server or VM for continuous operation
-- Monitor the log files periodically
-- Ensure your wallet has enough funds for gas fees
-- Backup your private key securely
+- Never commit your `.env` file
+- Keep your private key secure
+- Use environment variables for sensitive data
+- The bot uses gas optimization settings to minimize transaction costs
 
 ## License
 
-[Your License Information]
-
-## Support
-
-[Contact Information or Support Instructions]
+MIT

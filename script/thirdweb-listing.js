@@ -1,5 +1,5 @@
 // Soenium NFT Batch Listing Script using thirdweb SDK
-require('dotenv').config();
+require('dotenv').config({ path: '../x_variables/.env' });
 const fs = require('fs');
 const { ThirdwebSDK } = require("@thirdweb-dev/sdk");
 const { ethers } = require("ethers");
@@ -38,7 +38,7 @@ const GAS_SETTINGS = {
 };
 
 // Setup logging to file
-const logFile = fs.createWriteStream('./nft-listing-log.txt', { flags: 'a' });
+const logFile = fs.createWriteStream('../server-logs/bonding-curve-log.txt', { flags: 'a' });
 const logLine = (msg) => {
   const timestamp = new Date().toISOString();
   const logMsg = `[${timestamp}] ${msg}`;

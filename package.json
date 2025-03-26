@@ -1,0 +1,17 @@
+{
+  "name": "nft-bonding-curve-lister",
+  "version": "1.0.0",
+  "description": "NFT listing bot with bonding curve pricing model - Current state: 3 tokens purchased",
+  "main": "script/bonding-curve-minting.js",
+  "scripts": {
+    "start": "node script/bonding-curve-minting.js",
+    "run": "./script/run-thirdweb.sh",
+    "install": "chmod +x script/run-thirdweb.sh"
+  },
+  "dependencies": {
+    "@thirdweb-dev/sdk": "^4.0.23",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.7.2"
+  },
+  "license": "MIT"
+} 

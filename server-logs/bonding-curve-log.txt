@@ -1,0 +1,351 @@
+[2025-03-26T03:27:12.379Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:27:18.161Z] Starting bonding curve minting sequence
+[2025-03-26T03:27:18.163Z] Token 1 is already listed in ETH at price 0.00001
+[2025-03-26T03:29:05.986Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:29:10.546Z] Starting bonding curve listing sequence
+[2025-03-26T03:34:27.223Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:34:39.651Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:35:02.705Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:35:14.475Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:35:29.228Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:36:29.945Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:36:30.054Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:36:32.267Z] Starting bonding curve listing sequence
+[2025-03-26T03:36:56.913Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:36:57.033Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:37:01.320Z] Checking marketplace capabilities...
+[2025-03-26T03:37:01.553Z] Error checking extensions: call revert exception [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ] (method="getAllExtensions()", data="0x", errorArgs=null, errorName=null, errorSignature=null, reason=null, code=CALL_EXCEPTION, version=abi/5.8.0)
+[2025-03-26T03:40:18.059Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:40:18.159Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:40:20.659Z] Starting bonding curve listing sequence
+[2025-03-26T03:40:20.660Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T03:40:20.661Z] Will list remaining 665 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T03:40:21.254Z] Found 665 copies of token ID 2
+[2025-03-26T03:40:21.975Z] Marketplace already approved
+[2025-03-26T03:40:21.975Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:40:30.291Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:40:30.291Z] Attempt 1 failed for Listing token 2: listingTx.wait is not a function
+[2025-03-26T03:40:30.291Z] Waiting 3000ms before retry...
+[2025-03-26T03:40:33.293Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:40:40.657Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:40:40.657Z] Attempt 2 failed for Listing token 2: listingTx.wait is not a function
+[2025-03-26T03:40:40.657Z] Waiting 6000ms before retry...
+[2025-03-26T03:40:46.659Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:40:55.411Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:41:08.506Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:41:08.604Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:41:11.641Z] Starting bonding curve listing sequence
+[2025-03-26T03:41:11.641Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T03:41:11.641Z] Will list remaining 665 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T03:41:12.308Z] Found 665 copies of token ID 2
+[2025-03-26T03:41:13.028Z] Marketplace already approved
+[2025-03-26T03:41:13.029Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:41:22.353Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:41:22.353Z] Attempt 1 failed for Listing token 2: listingTx.wait is not a function
+[2025-03-26T03:41:22.353Z] Waiting 3000ms before retry...
+[2025-03-26T03:41:25.354Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:41:32.999Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:41:32.999Z] Attempt 2 failed for Listing token 2: listingTx.wait is not a function
+[2025-03-26T03:41:32.999Z] Waiting 6000ms before retry...
+[2025-03-26T03:41:39.000Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:41:46.914Z] Error creating listing: listingTx.wait is not a function
+[2025-03-26T03:42:34.728Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:42:34.828Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:42:37.319Z] Starting bonding curve listing sequence
+[2025-03-26T03:42:37.319Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T03:42:37.320Z] Will list remaining 665 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T03:42:37.769Z] Current balance for token ID 2: 665
+[2025-03-26T03:42:37.769Z] Found 665 copies of token ID 2
+[2025-03-26T03:42:38.198Z] Marketplace already approved to transfer NFTs
+[2025-03-26T03:42:38.199Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:42:38.202Z] Error creating listing: [
+  {
+    "code": "invalid_union",
+    "unionErrors": [
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "string",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected string, received object"
+          }
+        ],
+        "name": "ZodError"
+      },
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "number",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected number, received object"
+          }
+        ],
+        "name": "ZodError"
+      }
+    ],
+    "path": [
+      "pricePerToken"
+    ],
+    "message": "Invalid input"
+  }
+]
+[2025-03-26T03:42:38.202Z] Attempt 1 failed for Listing token 2: [
+  {
+    "code": "invalid_union",
+    "unionErrors": [
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "string",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected string, received object"
+          }
+        ],
+        "name": "ZodError"
+      },
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "number",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected number, received object"
+          }
+        ],
+        "name": "ZodError"
+      }
+    ],
+    "path": [
+      "pricePerToken"
+    ],
+    "message": "Invalid input"
+  }
+]
+[2025-03-26T03:42:38.202Z] Waiting 3000ms before retry...
+[2025-03-26T03:42:41.204Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:42:41.205Z] Error creating listing: [
+  {
+    "code": "invalid_union",
+    "unionErrors": [
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "string",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected string, received object"
+          }
+        ],
+        "name": "ZodError"
+      },
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "number",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected number, received object"
+          }
+        ],
+        "name": "ZodError"
+      }
+    ],
+    "path": [
+      "pricePerToken"
+    ],
+    "message": "Invalid input"
+  }
+]
+[2025-03-26T03:42:41.205Z] Attempt 2 failed for Listing token 2: [
+  {
+    "code": "invalid_union",
+    "unionErrors": [
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "string",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected string, received object"
+          }
+        ],
+        "name": "ZodError"
+      },
+      {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "number",
+            "received": "object",
+            "path": [
+              "pricePerToken"
+            ],
+            "message": "Expected number, received object"
+          }
+        ],
+        "name": "ZodError"
+      }
+    ],
+    "path": [
+      "pricePerToken"
+    ],
+    "message": "Invalid input"
+  }
+]
+[2025-03-26T03:42:41.206Z] Waiting 6000ms before retry...
+[2025-03-26T03:42:47.208Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:43:06.918Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T03:43:07.028Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T03:43:10.151Z] Starting bonding curve listing sequence
+[2025-03-26T03:43:10.151Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T03:43:10.151Z] Will list remaining 665 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T03:43:10.717Z] Current balance for token ID 2: 665
+[2025-03-26T03:43:10.717Z] Found 665 copies of token ID 2
+[2025-03-26T03:43:11.344Z] Marketplace already approved to transfer NFTs
+[2025-03-26T03:43:11.345Z] Listing token 2 at price 0.00104602 ETH
+[2025-03-26T03:43:21.310Z] Created listing for token 2 at price 0.00104602 ETH
+[2025-03-26T03:43:21.310Z] Transaction hash: 0xced43bac3eabf1f49e9b312448260ad5b1ed0531c93fd25139fabfe0e5dd2843
+[2025-03-26T03:43:23.311Z] Listing token 3 at price 0.00208204 ETH
+[2025-03-26T03:43:33.352Z] Created listing for token 3 at price 0.00208204 ETH
+[2025-03-26T03:43:33.352Z] Transaction hash: 0x21c3ff0e059242632bdd5ef8f882c0359f42c37b905e01ef3983d2700aa1a227
+[2025-03-26T03:43:35.353Z] Listing token 4 at price 0.00311806 ETH
+[2025-03-26T03:43:44.687Z] Created listing for token 4 at price 0.00311806 ETH
+[2025-03-26T03:43:44.687Z] Transaction hash: 0x12e344e5b3637eea97909805cb4d52fc38db35b5b21b5cb793f10e0978965715
+[2025-03-26T03:43:46.688Z] Listing token 5 at price 0.00415408 ETH
+[2025-03-26T03:43:55.927Z] Created listing for token 5 at price 0.00415408 ETH
+[2025-03-26T03:43:55.927Z] Transaction hash: 0x8204ad4bb6dce88d8f063d5406a24001f620e216706797c7582faf8c94a3312d
+[2025-03-26T03:43:57.928Z] Listing token 6 at price 0.00519011 ETH
+[2025-03-26T03:44:07.979Z] Created listing for token 6 at price 0.00519011 ETH
+[2025-03-26T03:44:07.979Z] Transaction hash: 0xfb8547115c3e048902d7f916c9a42f10c369d0fc5346e003b6723ef98b59776c
+[2025-03-26T03:44:09.980Z] Listing token 7 at price 0.00622613 ETH
+[2025-03-26T03:44:20.558Z] Created listing for token 7 at price 0.00622613 ETH
+[2025-03-26T03:44:20.558Z] Transaction hash: 0x845c8c348f2ae79f7464b6828daeb7039173a9ff44fbcae6c9032f1292ef218e
+[2025-03-26T03:44:22.559Z] Listing token 8 at price 0.00726215 ETH
+[2025-03-26T03:44:32.096Z] Created listing for token 8 at price 0.00726215 ETH
+[2025-03-26T03:44:32.096Z] Transaction hash: 0x16ba0f5b7ec509e79c21a7fc710009ca0b8a2acfcff933d4721059a5136f0440
+[2025-03-26T03:44:34.096Z] Listing token 9 at price 0.00829817 ETH
+[2025-03-26T03:44:44.046Z] Created listing for token 9 at price 0.00829817 ETH
+[2025-03-26T03:44:44.046Z] Transaction hash: 0x02461823558ebb8242d900cd412b78641dac02ad89489a6ffddcd3ba9e46550d
+[2025-03-26T03:44:46.047Z] Listing token 10 at price 0.00933419 ETH
+[2025-03-26T03:44:55.991Z] Created listing for token 10 at price 0.00933419 ETH
+[2025-03-26T03:44:55.991Z] Transaction hash: 0xef233ad1ad0aec2c86bfa6869a8db42552f874f6e1899b4824f251cfc8d608c2
+[2025-03-26T03:44:57.993Z] Listing token 11 at price 0.01037021 ETH
+[2025-03-26T03:45:07.226Z] Created listing for token 11 at price 0.01037021 ETH
+[2025-03-26T03:45:07.226Z] Transaction hash: 0x3689567bc9c74d52a39c9c90215e269479f18389007bd7cff33b8f19304a909d
+[2025-03-26T03:45:09.229Z] Listing token 12 at price 0.01140623 ETH
+[2025-03-26T03:45:19.060Z] Created listing for token 12 at price 0.01140623 ETH
+[2025-03-26T03:45:19.060Z] Transaction hash: 0x966f12c970ac23a74cf356b637bffbf070fe8ee28524a43a8e1ced5151cab4b6
+[2025-03-26T03:45:21.060Z] Listing token 13 at price 0.01244225 ETH
+[2025-03-26T03:45:31.317Z] Created listing for token 13 at price 0.01244225 ETH
+[2025-03-26T03:45:31.317Z] Transaction hash: 0x9e6dac2d1d655ddb48d5e7ac1fdc571fe99b3222f628fe0d15b8ccd13c9a837e
+[2025-03-26T03:45:33.320Z] Listing token 14 at price 0.01347827 ETH
+[2025-03-26T03:45:42.857Z] Created listing for token 14 at price 0.01347827 ETH
+[2025-03-26T03:45:42.857Z] Transaction hash: 0x143e33c96ddec8cca4ddffd82fe87bdac4b14a9907948502eb8771f0b50a52f3
+[2025-03-26T03:45:44.859Z] Listing token 15 at price 0.01451429 ETH
+[2025-03-26T03:45:54.390Z] Created listing for token 15 at price 0.01451429 ETH
+[2025-03-26T03:45:54.390Z] Transaction hash: 0xbc764c57478528f2bc76ac642825e659c38a416b560ecb83c06227c48965bcc8
+[2025-03-26T03:45:56.391Z] Listing token 16 at price 0.01555032 ETH
+[2025-03-26T03:46:06.505Z] Created listing for token 16 at price 0.01555032 ETH
+[2025-03-26T03:46:06.505Z] Transaction hash: 0x02e3003399226f7548c2f247102dfaea6206813484984bd4d3e16f3acf147344
+[2025-03-26T03:46:08.508Z] Listing token 17 at price 0.01658634 ETH
+[2025-03-26T03:46:17.784Z] Created listing for token 17 at price 0.01658634 ETH
+[2025-03-26T03:46:17.784Z] Transaction hash: 0xe671382d6ff340db9366e4e3c578e7e97d127a251010d5dc06d652f5fc2433dd
+[2025-03-26T03:46:19.785Z] Listing token 18 at price 0.01762236 ETH
+[2025-03-26T03:46:29.023Z] Created listing for token 18 at price 0.01762236 ETH
+[2025-03-26T03:46:29.023Z] Transaction hash: 0xb1913e748e091f6cd7f78b2b4385b24e37b9511dc862357dbf4d81e8953f0e14
+[2025-03-26T03:46:31.024Z] Listing token 19 at price 0.01865838 ETH
+[2025-03-26T03:46:40.607Z] Created listing for token 19 at price 0.01865838 ETH
+[2025-03-26T03:46:40.607Z] Transaction hash: 0x698bcfb9b939f702da3738f3a7ec7349b76fd825049ba6650ce45942fbb6062e
+[2025-03-26T03:46:42.608Z] Listing token 20 at price 0.0196944 ETH
+[2025-03-26T03:46:54.183Z] Created listing for token 20 at price 0.0196944 ETH
+[2025-03-26T03:46:54.183Z] Transaction hash: 0xe377b91bf589a12ac9d2c6415268421d93986c2750b2da0790fec44da8635de4
+[2025-03-26T03:46:56.184Z] Listing token 21 at price 0.02073042 ETH
+[2025-03-26T03:47:05.702Z] Created listing for token 21 at price 0.02073042 ETH
+[2025-03-26T03:47:05.702Z] Transaction hash: 0xa6541f6e7c8d4be2269f949c5399fcda796b51f74313b872d741d638df1e831c
+[2025-03-26T03:47:07.704Z] Listing token 22 at price 0.02176644 ETH
+[2025-03-26T03:47:17.244Z] Created listing for token 22 at price 0.02176644 ETH
+[2025-03-26T03:47:17.244Z] Transaction hash: 0xaaaa1bcb1b187397a5b17f544b992012c48098c06bdae135b3c7389487a4e92d
+[2025-03-26T03:47:19.245Z] Listing token 23 at price 0.02280246 ETH
+[2025-03-26T04:01:42.089Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T04:01:42.210Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T04:01:45.927Z] Starting bonding curve listing sequence
+[2025-03-26T04:01:45.927Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T04:01:45.928Z] Will list remaining 666 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T04:01:46.434Z] Found 665 copies of token ID 2
+[2025-03-26T04:01:47.090Z] Marketplace already approved
+[2025-03-26T04:01:47.090Z] Creating 1 listing(s) this round...
+[2025-03-26T04:01:47.091Z] Listing token 1 at price 0.00001 ETH
+[2025-03-26T04:01:47.684Z] Error creating listing: DirectListings extension not found
+[2025-03-26T04:01:47.685Z] Attempt 1 failed for Listing token 1: DirectListings extension not found
+[2025-03-26T04:01:47.685Z] Waiting 3000ms before retry...
+[2025-03-26T04:01:50.687Z] Listing token 1 at price 0.00001 ETH
+[2025-03-26T04:01:51.521Z] Error creating listing: DirectListings extension not found
+[2025-03-26T04:01:51.522Z] Attempt 2 failed for Listing token 1: DirectListings extension not found
+[2025-03-26T04:01:51.522Z] Waiting 6000ms before retry...
+[2025-03-26T04:01:57.524Z] Listing token 1 at price 0.00001 ETH
+[2025-03-26T04:01:58.180Z] Error creating listing: DirectListings extension not found
+[2025-03-26T04:03:13.980Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T04:03:14.089Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T04:03:17.491Z] Starting bonding curve listing sequence
+[2025-03-26T04:03:17.492Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T04:03:17.492Z] Will list remaining 666 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T04:03:18.128Z] Current balance for token ID 2: 665
+[2025-03-26T04:03:18.128Z] Found 665 copies of token ID 2
+[2025-03-26T04:03:18.651Z] Marketplace already approved to transfer NFTs
+[2025-03-26T04:03:18.651Z] Creating 1 listing(s) this round...
+[2025-03-26T04:03:18.652Z] Listing token 1 at price 0.00001 ETH
+[2025-03-26T04:03:28.385Z] Listing created successfully in 9.73s! Gas used: 259562, TX Hash: 0x86c8a273a2569976dbfd6944f7166caa6955b9ee4e31f3302b0b74866de85856
+[2025-03-26T04:03:28.385Z] Listed 1 copy of token ID 2 at 0.00001 ETH
+[2025-03-26T04:03:30.929Z] Current balance for token ID 2: 665
+[2025-03-26T04:03:30.930Z] Warning: Token balance did not decrease after listing. The marketplace might not be taking custody of the token.
+[2025-03-26T04:03:30.930Z] Waiting 10 minutes before next balance check...
+[2025-03-26T04:15:46.397Z] Starting NFT listing process with thirdweb SDK - customized hourly listing pattern...
+[2025-03-26T04:15:46.397Z] Will create one ETH and one ASTR listing at the top of each hour normally
+[2025-03-26T04:15:46.398Z] During daytime hours (1pm-7pm), will only create one ASTR listing
+[2025-03-26T04:15:46.398Z] For balance decreases, favoring ASTR (65%) over ETH (35%)
+[2025-03-26T04:15:46.398Z] Checking for balance decreases every 10 minutes
+[2025-03-26T04:15:46.398Z] When balance decreases, will mint exactly the same number of tokens that were lost
+[2025-03-26T04:15:46.398Z] ETH price: 0.0005 ETH, ASTR price: 30 ASTR
+[2025-03-26T04:15:46.507Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T04:15:46.507Z] Gas settings: Max Priority Fee=1000000000, Max Fee=5000000000
+[2025-03-26T04:15:51.563Z] ASTR token contract initialized
+[2025-03-26T04:15:52.083Z] Current balance for token ID 0: 340
+[2025-03-26T04:15:52.607Z] Marketplace already approved to transfer NFTs
+[2025-03-26T04:15:52.607Z] Setting approval for ASTR tokens...
+[2025-03-26T04:16:01.215Z] ASTR token approval transaction successful: 0x701ed8d1cd306dbb515ec8567e50be7bb66070c4e96bb1d89cd5aad0c806511a
+[2025-03-26T04:16:01.744Z] Current balance for token ID 0: 340
+[2025-03-26T04:16:01.745Z] Found 340 copies of token ID 0 to list
+[2025-03-26T04:16:01.745Z] Creating 1 listing(s) this round...
+[2025-03-26T04:16:01.751Z] Using probability-based currency ASTR (65% ASTR) for listing #1
+[2025-03-26T04:16:01.752Z] Creating listing #1 at price 30 ASTR...
+[2025-03-26T04:16:11.708Z] Listing created successfully in 9.96s! Gas used: 239674, TX Hash: 0x61da6b421490e64067df4c2f2dde92745d7c7e7760d6147b212f97d57ff6d75f
+[2025-03-26T04:16:11.708Z] Listed 1 copy of token ID 0 at 30 ASTR
+[2025-03-26T04:16:11.708Z] Listing 1 complete. Total elapsed time: 0.17 minutes. Remaining: 340
+[2025-03-26T04:16:12.254Z] Current balance for token ID 0: 340
+[2025-03-26T04:16:12.254Z] Warning: Token balance did not decrease after listing. The marketplace might not be taking custody of the token.
+[2025-03-26T04:16:12.260Z] Scheduled next listings for top of next hour: 10:00:00 PM, waiting 43.8 minutes
+[2025-03-26T04:16:12.260Z] Will check for balance changes every 10 minutes while waiting...

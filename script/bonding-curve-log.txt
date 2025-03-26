@@ -1,0 +1,25 @@
+[2025-03-26T04:17:15.717Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T04:17:15.850Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T04:17:18.838Z] Starting bonding curve listing sequence
+[2025-03-26T04:17:18.838Z] Token 1 is already listed at 0.00001 ETH
+[2025-03-26T04:17:18.838Z] Will list remaining 666 tokens with increasing prices up to 0.69 ETH
+[2025-03-26T04:17:19.775Z] Current balance for token ID 2: 664
+[2025-03-26T04:17:19.775Z] Found 664 copies of token ID 2
+[2025-03-26T04:17:20.394Z] Marketplace already approved to transfer NFTs
+[2025-03-26T04:17:20.394Z] Creating 1 listing(s) this round...
+[2025-03-26T04:17:20.395Z] Listing token 1 at price 0.00001 ETH
+[2025-03-26T04:17:29.842Z] Listing created successfully in 9.45s! Gas used: 259562, TX Hash: 0xd6cb7fe76f4854ea3e0d645de895d4e039b3a7e41f5dc6eea5321fa177fadba3
+[2025-03-26T04:17:29.842Z] Listed 1 copy of token ID 2 at 0.00001 ETH
+[2025-03-26T04:17:32.295Z] Current balance for token ID 2: 664
+[2025-03-26T04:17:32.296Z] Warning: Token balance did not decrease after listing. The marketplace might not be taking custody of the token.
+[2025-03-26T04:17:32.296Z] Waiting 10 minutes before next balance check...
+[2025-03-26T04:21:37.953Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-26T04:21:38.061Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-26T04:21:41.340Z] Starting bonding curve listing sequence
+[2025-03-26T04:21:41.341Z] Will list tokens with prices from 0.00001 ETH to 0.69 ETH
+[2025-03-26T04:21:42.013Z] Current balance for token ID 2: 663
+[2025-03-26T04:21:42.013Z] Found 663 copies of token ID 2
+[2025-03-26T04:21:42.556Z] Marketplace already approved to transfer NFTs
+[2025-03-26T04:21:43.058Z] Current balance for token ID 2: 663
+[2025-03-26T04:21:43.058Z] Balance unchanged at 663. No new listings needed.
+[2025-03-26T04:21:43.058Z] Waiting 10 minutes before next balance check...
