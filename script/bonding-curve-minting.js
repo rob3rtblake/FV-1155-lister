@@ -11,11 +11,19 @@ const TOKEN_ID = 2; // The ERC1155 token ID for bonding curve tokens
 
 // Bonding curve configuration
 const BONDING_CURVE_CONFIG = {
-  startPrice: "0.00001",
-  maxPrice: "0.69",
+  contractAddress: "0x7e5F161dd824d98AC3474eBf550716d0cb83E8C6",
+  marketplaceAddress: "0xF87f5313E830d8E2670898e231D8701532b1eB09",
+  tokenId: 2, // ERC1155 token ID
+  currentListed: 4, // Updated to 4 since we're waiting for the 4th token sale
+  lastTokenNumber: 4, // Updated to 4 since we're waiting for the 4th token sale
+  minPrice: ethers.utils.parseEther("0.00001"),
+  maxPrice: ethers.utils.parseEther("0.69"),
   totalTokens: 666,
-  currentListed: 3, // 3 tokens already purchased
-  lastTokenNumber: 3 // Last token number that was listed
+  checkInterval: 10 * 60 * 1000, // 10 minutes
+  maxRetries: 3,
+  retryDelay: 5000, // 5 seconds
+  gasLimit: 500000,
+  gasPriceMultiplier: 1.2
 };
 
 // Currency options (ETH only)
@@ -254,6 +262,44 @@ async function listAllTokens() {
     logLine('Process terminated due to critical error.');
     throw error;
   }
+}
+
+async function checkAndCreateListing() {
+    try {
+        const currentBalance = await contract.erc1155.balanceOf(
+            bondingCurveConfig.contractAddress,
+            bondingCurveConfig.tokenId
+        );
+        
+        console.log(`Current balance: ${currentBalance}`);
+        console.log(`Waiting for sale of token #${bondingCurveConfig.currentListed}...`);
+        
+        if (currentBalance < bondingCurveConfig.totalTokens - bondingCurveConfig.currentListed) {
+            console.log(`Token #${bondingCurveConfig.currentListed} has been sold! Creating listing for token #${bondingCurveConfig.currentListed + 1}...`);
+            
+            // Calculate price for next token
+            const price = calculateBondingCurvePrice(
+                bondingCurveConfig.currentListed + 1,
+                bondingCurveConfig.minPrice,
+                bondingCurveConfig.maxPrice,
+                bondingCurveConfig.totalTokens
+            );
+            
+            // Create listing for next token
+            await createListing(price);
+            
+            // Update counters
+            bondingCurveConfig.currentListed++;
+            bondingCurveConfig.lastTokenNumber++;
+            
+            console.log(`Successfully created listing for token #${bondingCurveConfig.currentListed}`);
+            console.log(`Next check in ${bondingCurveConfig.checkInterval / 1000} seconds`);
+        } else {
+            console.log(`No new sales detected. Next check in ${bondingCurveConfig.checkInterval / 1000} seconds`);
+        }
+    } catch (error) {
+        console.error("Error in checkAndCreateListing:", error);
+    }
 }
 
 // Start the script

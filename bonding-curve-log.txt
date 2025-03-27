@@ -1,0 +1,11 @@
+[2025-03-27T02:32:13.561Z] Using RPC URL: https://rpc.soneium.org
+[2025-03-27T02:32:13.647Z] Connected to network with wallet: 0xeb418E53EFcDc351137C9A81c70967b8D7063f4C
+[2025-03-27T02:32:20.123Z] Starting bonding curve listing sequence
+[2025-03-27T02:32:20.124Z] Current state: 3 tokens already purchased
+[2025-03-27T02:32:20.124Z] Will continue listing remaining tokens with prices from 0.00001 ETH to 0.69 ETH
+[2025-03-27T02:32:20.578Z] Current balance for token ID 2: 663
+[2025-03-27T02:32:20.578Z] Found 663 copies of token ID 2
+[2025-03-27T02:32:21.021Z] Marketplace already approved to transfer NFTs
+[2025-03-27T02:32:21.472Z] Current balance for token ID 2: 663
+[2025-03-27T02:32:21.472Z] Balance unchanged at 663. No new listings needed.
+[2025-03-27T02:32:21.472Z] Waiting 10 minutes before next balance check...
