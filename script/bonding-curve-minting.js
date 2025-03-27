@@ -10,20 +10,20 @@ const MARKETPLACE_ADDRESS = "0xF87f5313E830d8E2670898e231D8701532b1eB09";
 const TOKEN_ID = 2; // The ERC1155 token ID for bonding curve tokens
 
 // Bonding curve configuration
-const BONDING_CURVE_CONFIG = {
-  contractAddress: "0x7e5F161dd824d98AC3474eBf550716d0cb83E8C6",
-  marketplaceAddress: "0xF87f5313E830d8E2670898e231D8701532b1eB09",
-  tokenId: 2, // ERC1155 token ID
-  currentListed: 4, // Updated to 4 since we're waiting for the 4th token sale
-  lastTokenNumber: 4, // Updated to 4 since we're waiting for the 4th token sale
-  minPrice: ethers.utils.parseEther("0.00001"),
-  maxPrice: ethers.utils.parseEther("0.69"),
-  totalTokens: 666,
-  checkInterval: 10 * 60 * 1000, // 10 minutes
-  maxRetries: 3,
-  retryDelay: 5000, // 5 seconds
-  gasLimit: 500000,
-  gasPriceMultiplier: 1.2
+const bondingCurveConfig = {
+    contractAddress: "0x7e5F161dd824d98AC3474eBf550716d0cb83E8C6",
+    marketplaceAddress: "0xF87f5313E830d8E2670898e231D8701532b1eB09",
+    tokenId: 2, // ERC1155 token ID
+    currentListed: 4, // Token 4 is currently listed
+    lastTokenNumber: 3, // Last token that was sold (3)
+    minPrice: ethers.utils.parseEther("0.00001"),
+    maxPrice: ethers.utils.parseEther("0.69"),
+    totalTokens: 666,
+    checkInterval: 10 * 60 * 1000, // 10 minutes
+    maxRetries: 3,
+    retryDelay: 5000, // 5 seconds
+    gasLimit: 500000,
+    gasPriceMultiplier: 1.2
 };
 
 // Currency options (ETH only)
@@ -53,9 +53,9 @@ const logLine = (msg) => {
 
 // Calculate current price based on bonding curve
 function calculateCurrentPrice(currentListed) {
-  const startPrice = parseFloat(BONDING_CURVE_CONFIG.startPrice);
-  const maxPrice = parseFloat(BONDING_CURVE_CONFIG.maxPrice);
-  const totalTokens = BONDING_CURVE_CONFIG.totalTokens;
+  const startPrice = parseFloat(bondingCurveConfig.startPrice);
+  const maxPrice = parseFloat(bondingCurveConfig.maxPrice);
+  const totalTokens = bondingCurveConfig.totalTokens;
   
   // Linear interpolation between start and max price
   const priceRange = maxPrice - startPrice;
@@ -126,7 +126,7 @@ async function withRetry(operationName, operation, retryCount = GAS_SETTINGS.ret
 
 async function createDirectListing(marketplace, address, tokenNumber) {
   try {
-    const currentPrice = calculateCurrentPrice(BONDING_CURVE_CONFIG.currentListed);
+    const currentPrice = calculateCurrentPrice(bondingCurveConfig.currentListed);
     const priceString = ethers.utils.formatEther(currentPrice);
     logLine(`Listing token ${tokenNumber} at price ${priceString} ETH`);
 
@@ -134,7 +134,7 @@ async function createDirectListing(marketplace, address, tokenNumber) {
     
     // Create direct listing using thirdweb SDK - listing ONE copy at a time
     const createListingTx = await marketplace.directListings.createListing({
-      assetContractAddress: NFT_CONTRACT_ADDRESS,
+      assetContractAddress: bondingCurveConfig.contractAddress,
       tokenId: TOKEN_ID,
       quantity: "1", // Important: List exactly 1 copy of the token
       currencyContractAddress: CURRENCY_OPTIONS.address,
@@ -183,7 +183,7 @@ async function setupSDK() {
     logLine(`Connected to network with wallet: ${address}`);
     
     const marketplace = await sdk.getContract(MARKETPLACE_ADDRESS, "marketplace-v3");
-    const nftCollection = await sdk.getContract(NFT_CONTRACT_ADDRESS, "edition");
+    const nftCollection = await sdk.getContract(bondingCurveConfig.contractAddress, "edition");
     
     return { sdk, marketplace, nftCollection, address };
   } catch (error) {
@@ -197,8 +197,8 @@ async function listAllTokens() {
     const { marketplace, nftCollection, address } = await setupSDK();
 
     logLine('Starting bonding curve listing sequence');
-    logLine(`Current state: ${BONDING_CURVE_CONFIG.currentListed} tokens already purchased`);
-    logLine(`Will continue listing remaining tokens with prices from ${BONDING_CURVE_CONFIG.startPrice} ETH to ${BONDING_CURVE_CONFIG.maxPrice} ETH`);
+    logLine(`Current state: ${bondingCurveConfig.currentListed} tokens already purchased`);
+    logLine(`Will continue listing remaining tokens with prices from ${bondingCurveConfig.startPrice} ETH to ${bondingCurveConfig.maxPrice} ETH`);
 
     // Check NFT balance and set approval
     let balance = await checkNFTBalance(nftCollection, address);
@@ -210,7 +210,7 @@ async function listAllTokens() {
     let previousBalance = balance;
     let listingsToCreate = 0;  // Start with 0 since we only create on balance decrease
 
-    while (BONDING_CURVE_CONFIG.currentListed < BONDING_CURVE_CONFIG.totalTokens) {
+    while (bondingCurveConfig.currentListed < bondingCurveConfig.totalTokens) {
       try {
         // Check current balance
         const newBalance = await checkNFTBalance(nftCollection, address);
@@ -222,15 +222,15 @@ async function listAllTokens() {
           
           // Create exactly as many listings as tokens sold
           for (let i = 0; i < tokensSold; i++) {
-            const tokenNumber = BONDING_CURVE_CONFIG.lastTokenNumber + 1;
+            const tokenNumber = bondingCurveConfig.lastTokenNumber + 1;
             
             await withRetry(
               `Listing token ${tokenNumber}`,
               () => createDirectListing(marketplace, address, tokenNumber)
             );
 
-            BONDING_CURVE_CONFIG.currentListed++;
-            BONDING_CURVE_CONFIG.lastTokenNumber = tokenNumber;
+            bondingCurveConfig.currentListed++;
+            bondingCurveConfig.lastTokenNumber = tokenNumber;
             
             // Small delay between listings to avoid rate limiting
             await new Promise(resolve => setTimeout(resolve, 2000));
@@ -272,7 +272,7 @@ async function checkAndCreateListing() {
         );
         
         console.log(`Current balance: ${currentBalance}`);
-        console.log(`Waiting for sale of token #${bondingCurveConfig.currentListed}...`);
+        console.log(`Waiting for sale of token #${bondingCurveConfig.currentListed} (currently listed at ${ethers.utils.formatEther(calculateBondingCurvePrice(4, bondingCurveConfig.minPrice, bondingCurveConfig.maxPrice, bondingCurveConfig.totalTokens))} ETH)...`);
         
         if (currentBalance < bondingCurveConfig.totalTokens - bondingCurveConfig.currentListed) {
             console.log(`Token #${bondingCurveConfig.currentListed} has been sold! Creating listing for token #${bondingCurveConfig.currentListed + 1}...`);

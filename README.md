@@ -7,7 +7,7 @@ A Node.js-based bot for managing NFT listings with a bonding curve pricing model
 - Contract Address: `0x7e5F161dd824d98AC3474eBf550716d0cb83E8C6`
 - Marketplace Address: `0xF87f5313E830d8E2670898e231D8701532b1eB09`
 - Token ID: 2 (ERC1155)
-- Current Status: Waiting for sale of 4th token (will automatically list token 5 after sale)
+- Current Status: Token 4 is currently listed (3 tokens sold, waiting for sale of token 4)
 - Price Range: 0.00001 ETH to 0.69 ETH
 - Total Tokens: 666
 
